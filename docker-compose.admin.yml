@@ -1,0 +1,7 @@
+version: "3"
+services:
+  edvrpasswd:
+    image: chrismasto/masto:exacq
+    volumes:
+      - edvrserver:/usr/local/exacq/server
+    entrypoint: ["/usr/local/exacq/server/edvrpasswd"]

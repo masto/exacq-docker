@@ -1,0 +1,14 @@
+version: "3"
+services:
+  edvrserver:
+    network_mode: host
+    volumes:
+      - /mnt/edvr:/mnt/edvr
+    restart: always
+
+volumes:
+  edvrserver:
+    driver_opts:
+      type: nfs
+      o: "addr=${edvrserver_nfs_host}"
+      device: ":${edvrserver_nfs_path}"

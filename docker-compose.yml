@@ -1,0 +1,10 @@
+version: "3"
+services:
+  edvrserver:
+    image: ${edvrserver_image:-chrismasto/exacq:latest}
+    ports:
+      - "22609:22609"
+    volumes:
+      - edvrserver:/usr/local/exacq/server
+      - edvr:/mnt/edvr
+    tty: true # unbuffer logs
