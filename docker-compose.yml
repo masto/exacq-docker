@@ -8,3 +8,8 @@ services:
       - edvrserver:/usr/local/exacq/server
       - edvr:/mnt/edvr
     tty: true # unbuffer logs
+  webservice:
+    image: $evws_image
+    volumes:
+      - evws_data:/usr/local/exacq/webservice/data
+    tty: true # unbuffer logs

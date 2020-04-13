@@ -2,7 +2,17 @@ version: "3"
 services:
   edvrserver:
     build: edvrserver
+  webservice:
+    build:
+      context: webservice
+      args:
+        - "EVWS_PW=ChangeMe123!"
+    ports:
+      - "80"
+      - "443"
+    command: ["--log", "debug"]
 
 volumes:
   edvrserver:
   edvr:
+  evws_data:
