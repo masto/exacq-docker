@@ -33,6 +33,8 @@ RUN service webservice stop \
 # Slim down the image
 RUN apt-get autoremove -y && apt-get clean -y
 
+VOLUME ["/usr/local/exacq/webservice/data"]
+
 EXPOSE 80 443
 ENTRYPOINT ["/usr/local/exacq/webservice/bin/wfe"]
 CMD ["--log", "info"]
