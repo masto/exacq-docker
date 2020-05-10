@@ -14,11 +14,11 @@ services:
 volumes:
   edvrserver:
     driver_opts:
-      type: nfs
+      type: nfs4
       o: "addr=${edvrserver_nfs_host}"
       device: ":${edvrserver_nfs_path}"
   evws_data:
     driver_opts:
-      type: nfs
+      type: nfs4
       o: "addr=${evws_data_nfs_host},vers=4"
       device: ":${evws_data_nfs_path}"
