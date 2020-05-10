@@ -3,7 +3,7 @@ services:
   edvrserver:
     network_mode: host
     volumes:
-      - /mnt/edvr:/mnt/edvr
+      - /mnt/edvr:/mnt/edvr:Z
     restart: always
   webservice:
     ports:
